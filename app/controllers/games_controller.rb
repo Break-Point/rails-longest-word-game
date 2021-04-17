@@ -3,10 +3,12 @@ require 'json'
 
 class GamesController < ApplicationController
   def new
-    @letters  = []
-    9.times do
-      @letters << ("A".."Z").to_a[rand(26)]
-    end
+    # @letters  = []
+    # 9.times do
+    #   @letters << ("A".."Z").to_a[rand(26)]
+    # end
+    # Replace above with 1 line below 🤯
+    @letters = ("A".."Z").to_a.sample(10)
     @letters 
   end
 
